@@ -1,0 +1,29 @@
+{
+  "name": "hype-bot",
+  "version": "1.0.0",
+  "description": "My discord Bot",
+  "main": "index.js",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "discord.js": "^11.3.0",
+    "g-image-search": "^1.0.2",
+    "giphy-api": "^1.2.7",
+    "random-puppy": "^1.1.0",
+    "snekfetch": "^3.6.4",
+    "weather-js": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HyperGalacticDev/hype-bot.git"
+  },
+  "author": "HyperGalactic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HyperGalacticDev/hype-bot/issues"
+  },
+  "homepage": "https://github.com/HyperGalacticDev/hype-bot#readme"
+}
