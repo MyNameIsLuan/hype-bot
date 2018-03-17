@@ -21,7 +21,7 @@ const dogeredit = [
 ]
 
 
-client.login(proccess.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
 
 client.on('ready', () =>{
     console.log('HypeBot Iniciado com Sucesso'.green);
