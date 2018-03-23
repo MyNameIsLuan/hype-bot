@@ -290,9 +290,9 @@ return}
                                     }
                                     if(message.content.startsWith(prefix + "set")) {
                                        
-                                        var args = message.content.slice(prefix.length).slice(' ');
+                                        var args = message.content.slice(prefix.length).trim().split(/ +/g);
 
-                                        if(!args) return message.channel.send("Incorrect Arguments, !set <newbie,friend,old,best> <user-mention>");
+                                        if(!args) message.channel.send("Incorrect Arguments, use !set <newbie,friend,old,best> <user-mention>")
 
                                         if(args[0] == "newbie") {
                                             let newbie = message.member.guild.roles.find('name', "💜 Newbie's");
@@ -336,7 +336,7 @@ return}
                                             message.channel.send(`Successfully. Now ${member} has role ${newbie}`)
                                         }
 
-                                        return message.channel.send("Incorrect Arguments, !set <newbie,friend,old,best> <user-mention>");
+                                        return message.channel.send("Incorrect Arguments, use !set <newbie,friend,old,best> <user-mention>");
        
                                 
 });
