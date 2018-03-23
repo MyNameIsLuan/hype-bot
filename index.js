@@ -288,7 +288,7 @@ return}
                                         });
                                     }
                                     if(message.content.startsWith("!set")) {
-                                        const args = message.content.slice(prefix.length).trim().split(/ +/g);
+                                        const args = message.content.slice(4).trim().split(/ +/g);
 
                                         if(args[0] == "newbie") {
                                             let newbie = message.member.guild.roles.find('name', "💜 Newbie's");
