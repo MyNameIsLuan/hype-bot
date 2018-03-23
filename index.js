@@ -287,6 +287,58 @@ return}
                                                 message.channel.send({embed});
                                         });
                                     }
+                                    if(message.content.startsWith("!set")) {
+                                        const args = message.content.slice(prefix.length).trim().split(/ +/g);
+
+                                        if(args[0] == "newbie") {
+                                            let newbie = message.member.guild.roles.find('name', "💜 Newbie's");
+                                            let member = message.mentions.members.first();
+                                            if(member.roles.has(newbie.id)) {
+                                                return message.channel.send("This member already have this role");
+                                            }
+                                            member.addRole(newbie);
+                                            message.channel.send(`Successfully. Now ${member} has role ${newbie}`)
+                                        }
+
+                                        if(args[0] == "friend") {
+                                            let friend = message.member.guild.roles.find('name', "💙 Friend's");
+                                            let member = message.mentions.members.first();
+                                            if(member.roles.has(newbie.id)) {
+                                                return message.channel.send("This member already have this role");
+                                            }
+                                            member.addRole(newbie);
+                                            message.channel.send(`Successfully. Now ${member} has role ${newbie}`)
+                                        }
+                                        }
+
+                                        if(args[0] == "old") {
+                                            let old = message.member.guild.roles.find('name', "💛 Old's");
+                                            let member = message.mentions.members.first();
+                                            if(member.roles.has(newbie.id)) {
+                                                return message.channel.send("This member already have this role");
+                                            }
+                                            member.addRole(newbie);
+                                            message.channel.send(`Successfully. Now ${member} has role ${newbie}`)
+                                        }
+                                        
+
+                                        if(args[0] == "best") {
+                                            let best = message.member.guild.roles.find('name', "💚 Best's");
+                                            let member = message.mentions.members.first();
+                                            if(member.roles.has(newbie.id)) {
+                                                return message.channel.send("This member already have this role");
+                                            }
+                                            member.addRole(newbie);
+                                            message.channel.send(`Successfully. Now ${member} has role ${newbie}`)
+                                        }
+
+                                        return message.channel.send("Incorrect Arguments, !set <newbie,friend,old,best> <user-mention>")
+
+                                        }
+
+
+                                    
+                                
 });
 
 function getValue(key, array) {
