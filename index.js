@@ -290,7 +290,7 @@ return}
                                     }
                                     if(message.content.startsWith(prefix + "set")) {
                                        
-                                        const args = message.content.slice(prefix.length).trim().split(/ +/g);
+                                        const args = message.content.slice(prefix.length).slice(' ');
 
                                         if(args[0] == "newbie") {
                                             let newbie = message.member.guild.roles.find('name', "💜 Newbie's");
