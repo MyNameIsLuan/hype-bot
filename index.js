@@ -4,6 +4,7 @@ const client = new Discord.Client();
 const {get} = require("snekfetch"); 
 var giphy = require('giphy-api')();
 var gis = require('g-image-search');
+var prefix = "!";
 var weather = require('weather-js');
 const randomPuppy = require('random-puppy');
 const subreddits = [
@@ -287,8 +288,9 @@ return}
                                                 message.channel.send({embed});
                                         });
                                     }
-                                    if(message.content.startsWith("!set")) {
-                                        const args = message.content.slice(4).trim().split(/ +/g);
+                                    if(message.content.startsWith(prefix + "set")) {
+                                       
+                                        const args = message.content.slice(prefix.length).trim().split(/ +/g);
 
                                         if(args[0] == "newbie") {
                                             let newbie = message.member.guild.roles.find('name', "💜 Newbie's");
