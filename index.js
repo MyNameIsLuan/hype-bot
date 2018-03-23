@@ -294,7 +294,7 @@ return}
                                             let newbie = message.member.guild.roles.find('name', "💜 Newbie's");
                                             let member = message.mentions.members.first();
                                             if(member.roles.has(newbie.id)) {
-                                                return message.channel.send("This member already have this role");
+                                                return message.channel.send("This member already have this role.");
                                             }
                                             member.addRole(newbie);
                                             message.channel.send(`Successfully. Now ${member} has role ${newbie}`)
@@ -304,7 +304,7 @@ return}
                                             let friend = message.member.guild.roles.find('name', "💙 Friend's");
                                             let member = message.mentions.members.first();
                                             if(member.roles.has(newbie.id)) {
-                                                return message.channel.send("This member already have this role");
+                                                return message.channel.send("This member already have this role.");
                                             }
                                             member.addRole(newbie);
                                             message.channel.send(`Successfully. Now ${member} has role ${newbie}`)
@@ -315,7 +315,7 @@ return}
                                             let old = message.member.guild.roles.find('name', "💛 Old's");
                                             let member = message.mentions.members.first();
                                             if(member.roles.has(newbie.id)) {
-                                                return message.channel.send("This member already have this role");
+                                                return message.channel.send("This member already have this role.");
                                             }
                                             member.addRole(newbie);
                                             message.channel.send(`Successfully. Now ${member} has role ${newbie}`)
@@ -326,7 +326,7 @@ return}
                                             let best = message.member.guild.roles.find('name', "💚 Best's");
                                             let member = message.mentions.members.first();
                                             if(member.roles.has(newbie.id)) {
-                                                return message.channel.send("This member already have this role");
+                                                return message.channel.send("This member already have this role.");
                                             }
                                             member.addRole(newbie);
                                             message.channel.send(`Successfully. Now ${member} has role ${newbie}`)
