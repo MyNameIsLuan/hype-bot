@@ -333,11 +333,7 @@ return}
                                         }
 
                                         return message.channel.send("Incorrect Arguments, !set <newbie,friend,old,best> <user-mention>")
-
-                                        }
-
-
-                                    
+       
                                 
 });
 
