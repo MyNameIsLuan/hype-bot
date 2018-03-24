@@ -312,7 +312,7 @@ return}
                                                 return message.channel.send("This member already have this role.");
                                             }
                                             member.addRole(friend);
-                                            message.channel.send(`Successfully. Now ${member} has role ${newbie}`)
+                                            message.channel.send(`Successfully. Now ${member} has role ${friend}`)
                                         }
                                         }
 
@@ -323,7 +323,7 @@ return}
                                                 return message.channel.send("This member already have this role.");
                                             }
                                             member.addRole(old);
-                                            message.channel.send(`Successfully. Now ${member} has role ${newbie}`)
+                                            message.channel.send(`Successfully. Now ${member} has role ${old}`)
                                         }
                                         
 
@@ -334,7 +334,7 @@ return}
                                                 return message.channel.send("This member already have this role.");
                                             }
                                             member.addRole(best);
-                                            message.channel.send(`Successfully. Now ${member} has role ${newbie}`)
+                                            message.channel.send(`Successfully. Now ${member} has role ${best}`)
                                         }
 
        
