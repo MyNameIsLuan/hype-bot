@@ -421,10 +421,10 @@ return}
                                         return;
                                     }
 
-                                    var user = message.mentions.members.first();
-                                    if(!user) return message.channel.send("Please insert a user to put in Blacklist.");
+                                    var args = message.content.split(' ').slice(1).join(' ');
+                                    if(!args) return message.channel.send("Please insert a user to put in Blacklist.");
 
-                                    message.channel.send(`The user ${user} is now blacklisted for the Hyper's Life.`);
+                                    message.channel.send(`The user <@${args}> is now blacklisted for the Hyper's Life.`);
 
                                 }
  
