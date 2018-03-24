@@ -292,7 +292,7 @@ return}
                                        
                                         var args = message.content.split(' ').slice(2).join(' ');
 
-                                        if(!args) message.channel.send("Incorrect Arguments, use !set <user-mention> <newbie,friend,old,best>");
+                                        if(!args) return message.channel.send("Incorrect Arguments, use !set <user-mention> <newbie,friend,old,best>");
 
                                         if(args == "newbie") {
                                             let newbie = message.member.guild.roles.find('name', "💜 Newbie's");
