@@ -362,7 +362,7 @@ return}
                                     if(args == "newbie") {
                                         let newbie = message.member.guild.roles.find('name', "💜 Newbie's");
                                         let member = message.mentions.members.first();
-                                        if(member.roles.has(newbie.id)) {
+                                        if(!member.roles.has(newbie.id)) {
                                             return message.channel.send("This member don't have this role.");
                                         }
                                         member.removeRole(newbie);
@@ -372,7 +372,7 @@ return}
                                     if(args == "friend") {
                                         let friend = message.member.guild.roles.find('name', "💙 Friend's");
                                         let member = message.mentions.members.first();
-                                        if(member.roles.has(friend.id)) {
+                                        if(!member.roles.has(friend.id)) {
                                             return message.channel.send("This member don't have this role.");
                                         }
                                         member.removeRole(friend);
