@@ -294,7 +294,7 @@ return}
 
                                         if(!args) message.channel.send("Incorrect Arguments, use !set <user-mention> <newbie,friend,old,best>");
 
-                                        if(args[1] == "newbie") {
+                                        if(args == "newbie") {
                                             let newbie = message.member.guild.roles.find('name', "💜 Newbie's");
                                             let member = message.mentions.members.first();
                                             if(member.roles.has(newbie.id)) {
@@ -304,7 +304,7 @@ return}
                                             message.channel.send(`Successfully. Now ${member} has role ${newbie}`)
                                         }
 
-                                        if(args[1] == "friend") {
+                                        if(args == "friend") {
                                             let friend = message.member.guild.roles.find('name', "💙 Friend's");
                                             let member = message.mentions.members.first();
                                             if(member.roles.has(newbie.id)) {
@@ -315,7 +315,7 @@ return}
                                         }
                                         }
 
-                                        if(args[1] == "old") {
+                                        if(args == "old") {
                                             let old = message.member.guild.roles.find('name', "💛 Old's");
                                             let member = message.mentions.members.first();
                                             if(member.roles.has(newbie.id)) {
@@ -326,7 +326,7 @@ return}
                                         }
                                         
 
-                                        if(args[1] == "best") {
+                                        if(args == "best") {
                                             let best = message.member.guild.roles.find('name', "💚 Best's");
                                             let member = message.mentions.members.first();
                                             if(member.roles.has(newbie.id)) {
