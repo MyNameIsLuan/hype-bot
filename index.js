@@ -413,6 +413,21 @@ return}
                                     message.channel.send(`Successfully. Now ${member} has role ${nitro.name}`);
                                 }
 
+                                if(message.content.startsWith("!blacklist")) {
+
+                                    if(!message.member.roles.find('name', "🌐 Hyper")) {
+                                        message.delete();
+                                        message.reply("apenas o Hyper pode usar este comando. sz");
+                                        return;
+                                    }
+
+                                    var user = message.mentions.members.first();
+                                    if(!user) return message.channel.send("Please insert a user to put in Blacklist.");
+
+                                    message.channel.send(`The user ${user} is now blacklisted for the Hyper's Life.`);
+
+                                }
+ 
 });
 
 function getValue(key, array) {
