@@ -290,7 +290,7 @@ return}
                                     }
                                     if(message.content.startsWith(prefix + "set")) {
                                        
-                                        var args = message.content.slice(prefix.length).trim().split(/ +/g);
+                                        var args = message.content.split(' ').slice(2).join(' ');
 
                                         if(!args) message.channel.send("Incorrect Arguments, use !set <user-mention> <newbie,friend,old,best>");
 
