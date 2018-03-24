@@ -308,7 +308,7 @@ return}
                                         if(args == "friend") {
                                             let friend = message.member.guild.roles.find('name', "💙 Friend's");
                                             let member = message.mentions.members.first();
-                                            if(member.roles.has(newbie.id)) {
+                                            if(member.roles.has(friend.id)) {
                                                 return message.channel.send("This member already have this role.");
                                             }
                                             member.addRole(friend);
@@ -319,7 +319,7 @@ return}
                                         if(args == "old") {
                                             let old = message.member.guild.roles.find('name', "💛 Old's");
                                             let member = message.mentions.members.first();
-                                            if(member.roles.has(newbie.id)) {
+                                            if(member.roles.has(old.id)) {
                                                 return message.channel.send("This member already have this role.");
                                             }
                                             member.addRole(old);
@@ -330,7 +330,7 @@ return}
                                         if(args == "best") {
                                             let best = message.member.guild.roles.find('name', "💚 Best's");
                                             let member = message.mentions.members.first();
-                                            if(member.roles.has(newbie.id)) {
+                                            if(member.roles.has(best.id)) {
                                                 return message.channel.send("This member already have this role.");
                                             }
                                             member.addRole(best);
