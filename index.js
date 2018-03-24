@@ -308,7 +308,7 @@ return}
                                                 return message.channel.send("This member already have this role.");
                                             }
                                             member.addRole(newbie);
-                                            message.channel.send(`Successfully. Now ${member} has role ${newbie}`)
+                                            message.channel.send(`Successfully. Now ${member} has role ${newbie.name}`)
                                         }
 
                                         if(args == "friend") {
@@ -318,7 +318,7 @@ return}
                                                 return message.channel.send("This member already have this role.");
                                             }
                                             member.addRole(friend);
-                                            message.channel.send(`Successfully. Now ${member} has role ${friend}`)
+                                            message.channel.send(`Successfully. Now ${member} has role ${friend.name}`)
                                         }
                                         
 
@@ -329,7 +329,7 @@ return}
                                                 return message.channel.send("This member already have this role.");
                                             }
                                             member.addRole(old);
-                                            message.channel.send(`Successfully. Now ${member} has role ${old}`)
+                                            message.channel.send(`Successfully. Now ${member} has role ${old.name}`)
                                         }
                                         
 
@@ -340,14 +340,14 @@ return}
                                                 return message.channel.send("This member already have this role.");
                                             }
                                             member.addRole(best);
-                                            message.channel.send(`Successfully. Now ${member} has role ${best}`)
+                                            message.channel.send(`Successfully. Now ${member} has role ${best.name}`)
                                         }
 
 
 
                                 }
 
-                                if(message.content.startsWith("!remove")) {
+                                if(message.content.startsWith("!unset")) {
                                     if(!message.member.roles.find('name', "🌐 Hyper")) {
                                         message.delete();
                                         message.reply("apenas o Hyper pode usar este comando. sz");
@@ -366,7 +366,7 @@ return}
                                             return message.channel.send("This member don't have this role.");
                                         }
                                         member.removeRole(newbie);
-                                        message.channel.send(`Successfully. Now ${member} hasn't role ${newbie}`)
+                                        message.channel.send(`Successfully. Now ${member} hasn't role ${newbie.name}`)
                                     }
 
                                     if(args == "friend") {
@@ -376,7 +376,7 @@ return}
                                             return message.channel.send("This member don't have this role.");
                                         }
                                         member.removeRole(friend);
-                                        message.channel.send(`Successfully. Now ${member} hasn't role ${friend}`)
+                                        message.channel.send(`Successfully. Now ${member} hasn't role ${friend.name}`)
                                     }
                                     
 
@@ -387,7 +387,7 @@ return}
                                             return message.channel.send("This member don't have this role.");
                                         }
                                         member.removeRole(old);
-                                        message.channel.send(`Successfully. Now ${member} hasn't role ${old}`)
+                                        message.channel.send(`Successfully. Now ${member} hasn't role ${old.name}`)
                                     }
                                     
 
@@ -398,7 +398,7 @@ return}
                                             return message.channel.send("This member don't have this role.");
                                         }
                                         member.removeRole(best);
-                                        message.channel.send(`Successfully. Now ${member} hasn't role ${best}`)
+                                        message.channel.send(`Successfully. Now ${member} hasn't role ${best.name}`)
                                     }
 
                                 }
@@ -410,7 +410,7 @@ return}
                                         return message.channel.send("You already have this role.");
                                     }
                                     member.addRole(nitro);
-                                    message.channel.send(`Successfully. Now ${member} has role ${nitro}`);
+                                    message.channel.send(`Successfully. Now ${member} has role ${nitro.name}`);
                                 }
 
 });
