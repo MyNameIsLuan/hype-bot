@@ -427,6 +427,38 @@ return}
                                     message.channel.send(`The user <@${args}> is now blacklisted for the Hyper's Life.`);
 
                                 }
+
+                                if(message.content.startsWith("!hypesquad")) {
+                                    let hype = message.member.guild.roles.find('name', "Hypesquader's");
+                                    let member = message.member;
+                                    if(member.roles.has(hype.id)) {
+                                        return message.channel.send("You already have this role.");
+                                    }
+                                    member.addRole(hype);
+                                    message.channel.send(`Successfully. Now ${member} has role ${hype.name}`);
+                                }
+
+                                if(message.content.startsWith("!girl")) {
+                                    let girl = message.member.guild.roles.find('name', "Girl");
+                                    let member = message.member;
+                                    if(member.roles.has(girl.id)) {
+                                        return message.channel.send("You already have this role.");
+                                    }
+                                    member.addRole(girl);
+                                    message.channel.send(`Successfully. Now ${member} has role ${girl.name}`);
+                                }
+ 
+
+                                if(message.content.startsWith("!men")) {
+                                    let men = message.member.guild.roles.find('name', "Men");
+                                    let member = message.member;
+                                    if(member.roles.has(men.id)) {
+                                        return message.channel.send("You already have this role.");
+                                    }
+                                    member.addRole(men);
+                                    message.channel.send(`Successfully. Now ${member} has role ${men.name}`);
+                                }
+ 
  
 });
 
