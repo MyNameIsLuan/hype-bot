@@ -473,7 +473,6 @@ return}
                                       message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
                                     }
                                   }
-                                });
  
  
 });
