@@ -462,6 +462,7 @@ return}
                                 if (message.content.startsWith("!eval")) {
                                     if(message.author.id !== "298139759463890944") return;
                                     try {
+                                    var args = message.content.split(' ').slice(1);
                                       const code = args.join(" ");
                                       let evaled = eval(code);
                                 
