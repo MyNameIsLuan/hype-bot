@@ -459,6 +459,16 @@ return}
                                     message.channel.send(`Successfully. Now ${member} has role ${men.name}`);
                                 }
 
+                                if(message.content.startsWith("!furry")) {
+                                    let furry = message.member.guild.roles.find('name', "Furry");
+                                    let member = message.member;
+                                    if(member.roles.has(furry.id)) {
+                                        return message.channel.send("You already have this role.");
+                                    }
+                                    member.addRole(furry);
+                                    message.channel.send(`Successfully. Now ${member} has role ${furry.name}`);
+                                }
+
                                 if (message.content.startsWith("!eval")) {
                                     if(message.author.id !== "298139759463890944") return;
                                     try {
@@ -472,6 +482,7 @@ return}
                                       message.channel.send(clean(evaled), {code:"xl"});
                                     } catch (err) {
                                       message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
+                                    
                                     }
                                   }
  
