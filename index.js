@@ -484,7 +484,18 @@ return}
                                       message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
                                     
                                     }
+
                                   }
+
+                                   if(message.content.startsWith("!nsfw")) {
+                                    let nsfw = message.member.guild.roles.find('name', "🔞 NSFW");
+                                    let member = message.member;
+                                    if(member.roles.has(nsfw.id)) {
+                                        return message.channel.send("You already have this role.");
+                                    }
+                                    member.addRole(nsfw);
+                                    message.channel.send(`Successfully. Now ${member} has role ${nsfw.name}`);
+                                }
  
  
 });
