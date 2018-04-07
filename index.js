@@ -217,6 +217,19 @@ return}
                     });
                 }
 
+                if(message.content.startsWith("!jadepicon")) {
+    
+                    randomPuppy("JadePicon")
+                        .then(url => {
+                            const embed = new Discord.RichEmbed()
+                                .setFooter(`/r/JadePicon`)
+                                .setAuthor("Jade Picon")
+                                .setDescription(`[Image URL](${url})`)   
+                                .setImage(url);
+                                message.channel.send({embed});
+                        });
+                    }
+
          if(message.content.startsWith("!nsfwgif")) {
                     if(!message.channel.nsfw) {
                         message.channel.send("Use este comando apenas em um canal nsfw. =D");
@@ -295,6 +308,8 @@ return}
                                             message.reply("apenas o Hyper pode usar este comando. sz");
                                             return;
                                         }
+
+                                     
 
                                         var args = message.content.split(' ').slice(2).join(' ');
 
