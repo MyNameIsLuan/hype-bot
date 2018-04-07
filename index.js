@@ -277,6 +277,19 @@ return}
                                 });
                             }
 
+                            if(message.content.startsWith("!usapics")) {
+                            
+                                randomPuppy("unitedstatesofamerica")
+                                    .then(url => {
+                                        const embed = new Discord.RichEmbed()
+                                            .setFooter(`/r/unitedstatesofamerica`)
+                                            .setAuthor("USA")
+                                            .setDescription(`[Image URL](${url})`)   
+                                            .setImage(url);
+                                            message.channel.send({embed});
+                                    });
+                                }
+
                             if(message.content.startsWith("!minions")) {
                         
                                 randomPuppy("Minions")
