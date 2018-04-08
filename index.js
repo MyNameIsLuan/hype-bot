@@ -317,6 +317,11 @@ return}
 
                                     if(message.content.startsWith("!arianagrande")) {
                         
+
+                                        if(message.channel.id != "432629233848680458") {
+                                            message.channel.send("Acesso Negado, utilize este comando em <#432629233848680458>")
+                                            return;
+                                        }
                                         randomPuppy("ArianaGrande")
                                             .then(url => {
                                                 const embed = new Discord.RichEmbed()
