@@ -314,6 +314,20 @@ return}
                                                 message.channel.send({embed});
                                         });
                                     }
+
+                                    if(message.content.startsWith("!arianagrande")) {
+                        
+                                        randomPuppy("ArianaGrande")
+                                            .then(url => {
+                                                const embed = new Discord.RichEmbed()
+                                                    .setFooter(`/r/ArianaGrande`)
+                                                    .setAuthor("Ariana Grande")
+                                                    .setDescription(`[Image URL](${url})`)   
+                                                    .setImage(url);
+                                                    message.channel.send({embed});
+                                            });
+                                        }
+
                                     if(message.content.startsWith(prefix + "set")) {
                                        
                                         if(!message.member.roles.find('name', "🌐 Hyper")) {
