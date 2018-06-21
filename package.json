@@ -8,6 +8,7 @@
     "discord.js": "^11.3.0",
     "g-image-search": "^1.0.2",
     "giphy-api": "^1.2.7",
+    "hypixel": "^1.0.3",
     "random-puppy": "^1.1.0",
     "snekfetch": "^3.6.4",
     "weather-js": "^2.0.0"
